@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Doctor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+    <h2>HealthCare+</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/bmi">BMI</a>
+    </div>
+</nav>
+
+<div class="container1">
+    <h1>Find Doctors</h1>
+    <p>Search for doctors in your city</p>
+
+    <div class="card">
+        <form id="doctorForm">
+            <label>Enter City</label>
+            <input type="text" id="city" placeholder="e.g. Indore, Delhi" required>
+
+            <button type="submit">Search Doctors</button>
+        </form>
+    </div>
+</div>
+
+<script>
+document.getElementById("doctorForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let city = document.getElementById("city").value;
+
+    let url = "https://www.practo.com/search/doctors?results_type=doctor&q=%5B%7B%22word%22%3A%22doctor%22%2C%22autocompleted%22%3Atrue%2C%22category%22%3A%22type%22%7D%5D&city=" + encodeURIComponent(city);
+
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>

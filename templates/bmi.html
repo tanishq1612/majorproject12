@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+    <h2>HealthCare+</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/bmi">BMI</a>
+    </div>
+</nav>
+
+<div class="container1">
+    <h1>BMI Calculator</h1>
+    <p>Check your body mass index</p>
+
+    <div class="card">
+        <form method="POST">
+            
+            <label>Height (cm)</label>
+            <input type="number" name="height" required>
+
+            <label>Weight (kg)</label>
+            <input type="number" name="weight" required>
+
+            <button type="submit">Calculate BMI</button>
+
+        </form>
+    </div>
+
+    {% if bmi %}
+    <div class="card">
+        <h2>Your Result</h2>
+        <p><strong>BMI:</strong> {{ bmi }}</p>
+        <p><strong>Status:</strong> {{ status }}</p>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

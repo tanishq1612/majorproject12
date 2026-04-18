@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Services</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>HealthCare+</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Main Section -->
+<div class="container1">
+
+    <h1>Health Checker</h1>
+    <p>Enter your health details below</p>
+
+    <!-- Form Card -->
+    <form method="POST" class="card">
+        <input type="number" name="bp" placeholder="Blood Pressure (e.g. 120)" required>
+        <input type="number" name="oxygen" placeholder="Oxygen Level (e.g. 98)" required>
+        <input type="number" name="sugar" placeholder="Blood Sugar (e.g. 110)" required>
+        <input type="number" name="pulse" placeholder="Pulse Rate (e.g. 72)" required>
+
+        <button type="submit">Analyze Health</button>
+    </form>
+
+    <!-- Result Section -->
+    {% if result %}
+    <div class="result-card">
+        <h2>Your Health Report</h2>
+        <ul>
+            {% for r in result %}
+            <li>{{ r }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+</div>
+<a href="/dashboard" class="btn">View Dashboard</a>
+<a href="/bmi" class="btn">BMI Calculator</a>
+<a href="/find-doctor" class=" btn">Find Doctor</a>
+<a href="/download" class="btn">Download My Data</a>
+<!-- Footer -->
+<footer>
+    <p> Healthcare+ | Built for Major Project by CSE Student</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0d6efd;
+    padding: 15px 40px;
+    color: white;
+}
+
+nav h2 {
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d1e7ff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0b5ed7;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+}
+
+.head{
+    text-align: center;
+    align-items: center;
+
+}
+.container1 {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+}
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* Inputs */
+input, textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #0d6efd;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+/* Result Card */
+.result-card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.result-card ul {
+    margin-top: 10px;
+}
+
+.result-card li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    background: #0d6efd;
+    color: white;
+}
+
+/*new*/
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.home-text {
+    width: 65%;
+}
+
+.gov-links {
+    width: 30%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.gov-links h3 {
+    margin-bottom: 15px;
+    color: #0d6efd;
+}
+
+.gov-links a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: #f1f1f1;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+
+.gov-links a:hover {
+    background: #0d6efd;
+    color: white;
+}

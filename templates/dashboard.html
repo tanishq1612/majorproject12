@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav>
+    <h2>HealthCare+</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/dashboard">Dashboard</a>
+    </div>
+</nav>
+
+<div class="container1">
+    <h1>Your Health Dashboard</h1>
+    <p>Visual representation of your reports</p>
+
+    <div class="card">
+       <canvas id="chart" height="100"></canvas>
+    </div>
+</div>
+<script>
+let data = {{ data | tojson | safe }};
+
+if(data.length === 0){
+    document.getElementById("chart").outerHTML = "<p>No data available. Add reports first.</p>";
+} else {
+
+    let labels = data.map((_, i) => "Report " + (i + 1));
+
+    let bp = data.map(x => x[0]);
+    let oxygen = data.map(x => x[1]);
+    let sugar = data.map(x => x[2]);
+    let pulse = data.map(x => x[3]);
+
+    new Chart(document.getElementById('chart'), {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'BP',
+                    data: bp,
+                    borderWidth: 2
+                },
+                {
+                    label: 'Oxygen',
+                    data: oxygen,
+                    borderWidth: 2
+                },
+                {
+                    label: 'Sugar',
+                    data: sugar,
+                    borderWidth: 2
+                },
+                {
+                    label: 'Pulse',
+                    data: pulse,
+                    borderWidth: 2
+                }
+            ]
+        }
+    });
+}
+</script>
+
+</body>
+</html>
